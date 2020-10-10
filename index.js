@@ -13,9 +13,10 @@ const rl = readline.createInterface({  //take user input
 });
 
 rl.question('Enter number of lines to print ', (input) => { //pass input to function
-    if (input == "") {
-        answer = 10
+    if (!isNaN(input)) {
+        input = 10
     }
+    
     read_line(input) //call function with user input
     rl.close();
 });
